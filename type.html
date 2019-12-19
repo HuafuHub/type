@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>type</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .demo{
+      width: 500px;
+      margin: 50px auto;
+      padding: 0 10px;
+      border: 1px solid;
+      font-size: 30px;
+    }
+    .text {
+      display: inline-block;
+      font-family: monospace;
+      letter-spacing: 0.5px;
+      overflow: hidden;
+      width: 16px;
+      animation: changeWidth 3s steps(26, end) forwards;
+    }
+    .text1 {
+      display: inline-block;
+      font-family: monospace;
+      letter-spacing: 0.5px;
+      overflow: hidden;
+      width: 16px;
+      animation: changeWidth1 3s steps(10, end) forwards;
+    }
+    .upper{
+      text-transform: uppercase;
+    }
+    .cursor {
+      animation: changeCursor 1s infinite;
+      vertical-align: 6px;
+    }
+
+    @keyframes changeWidth {
+      0% {
+        width: 0px;
+      }
+
+      100% {
+        width: 400px;
+      }
+    }
+    @keyframes changeWidth1 {
+      0% {
+        width: 0px;
+      }
+
+      100% {
+        width: 154px;
+      }
+    }
+
+    @keyframes changeCursor {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="demo upper">
+      <span class="text">abcdefghijklmnopqrstuvwxyz</span><span class="cursor">|</span>
+  </div>
+  <div class="demo">
+      <span class="text">abcdefghijklmnopqrstuvwxyz</span><span class="cursor">|</span>
+  </div>
+  <div class="demo">
+      <span class="text1">0123456789</span><span class="cursor">|</span>
+  </div>
+  
+</body>
+
+</html>
